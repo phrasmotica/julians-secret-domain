@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the Album</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="guess-the-album.css" />
+    </head>
+
+    <body>
+        <div class="container guess-the-album">
+            <div class="content">
+                <h1>Julian's Secret Domain - Guess the Album</h1>
+
+                <a href="index.html">
+                    <p>Back to home page</p>
+                </a>
+
+                <div class="about">
+                    <h2>About this game</h2>
+
+                    <p>
+                        Adapted from a two-player pen-and-paper game, in which each player picks an album from the top 100 of the
+
+                        <a href="https://rateyourmusic.com/charts/top/album/all-time/deweight:live,archival,soundtrack/" target="_blank" rel="noopener noreferrer">RateYourMusic all-time album chart</a>
+
+                        and writes a review for it, regardless of whether the player has listened to the album in question. The other player then attempts to guess the artist and album title.
+                    </p>
+
+                    <h2>Rules</h2>
+
+                    <p>
+                        <ul>
+                            <li>
+                                No using your browser's "Inspect Element" feature
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        <b>If you are caught cheating then you may choose to inflict self-punishment by sitting in the nearest vacant corner of the room you're occupying and subjecting yourself to the full duration of William Basinski's &quot;The Disintegration Loops&quot; in unbroken silence.</b>
+                    </p>
+
+                    <p>
+                        The position of each album at the time of the review's writing is shown in parentheses next to the album title upon the user's revealing its identity.
+                    </p>
+                </div>
+
+                <div class="albums">
+                    <div class="album">
+                        <h3>Album 1</h3>
+
+                        <p>Microscopic soundscapes applied to dramatic and sensual electronic pop balladry. The vocalist's intimacy to the microphone is apparent throughout the twelve tracks totalling fifty-six minutes. While some may deem it boring or overly reliant on a sonic gimmick, the tiptoeing instrumentation and unconventionally structured songwriting sticks the landing. A classic of turn-of-the-millennium electronica.</p>
+
+                        <button id="album1RevealButton" onclick="toggle('album1Reveal')">
+                            Show Answer
+                        </button>
+
+                        <div id="album1Reveal" class="hidden">
+                            <h4>Bj&ouml;rk - Vespertine (&num;45)</h4>
+
+                            <img class="album-artwork" src="images/vespertine.jpg">
+
+                            <p class="review-comment">The writer had heard this album.</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <h3>Album 2</h3>
+
+                        <p>The figurehead of jazz's most celebrated family comes through with an absolute slam dunk of a spiritual odyssey. Their instrumental chops are at the fore of the short runtime's weaving passages, with the B-side of the LP a grand highlight in the 60s jazz canon. Their descendants would go on to make waves in late 00s/early 10s wonky but those roots began to grow back when the family were a true jazz five-bagger.</p>
+
+                        <button id="album2RevealButton" onclick="toggle('album2Reveal')">
+                            Show Answer
+                        </button>
+
+                        <div id="album2Reveal" class="hidden">
+                            <h4>John Coltrane - A Love Supreme (&num;17)</h4>
+
+                            <img class="album-artwork" src="images/alovesupreme.jpg">
+
+                            <p class="review-comment">The writer had NOT heard this album. The lack of direct or indirect references to Alice Coltrane in this review was a deliberate choice, as to not make it too obvious which album was being reviewed.</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <h3>Album 3</h3>
+
+                        <p>Oft-censored artwork is the entrypoint to the two LPs of this rock revolutionary's crowning achievement. (?) Iconic fashion adorned this king of the axe as he flew the flag for summer-of-love hippies wanting to rock out and freak out. An astounding riffmaker that inspired millions.</p>
+
+                        <button id="album3RevealButton" onclick="toggle('album3Reveal')">
+                            Show Answer
+                        </button>
+
+                        <div id="album3Reveal" class="hidden">
+                            <h4>Jimi Hendrix - Electric Ladyland (&num;64)</h4>
+
+                            <img class="album-artwork" src="images/electricladyland.jpg">
+
+                            <p class="review-comment">The writer had NOT heard this album.</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <h3>Album 4</h3>
+
+                        <p>It's the late 70s, punk rock has taken over but these artful social commentators have a different medium. The class structure is fucked, we're all stuck in it but pretty soon we'll be dead anyway. Either totally insufferable or a fan favourite, depending on your disposition. The legacy of this band is matched by few, as is their commercial success. One for the die-hards, or those amenable to trippy, droney dirges.</p>
+
+                        <button id="album4RevealButton" onclick="toggle('album4Reveal')">
+                            Show Answer
+                        </button>
+
+                        <div id="album4Reveal" class="hidden">
+                            <h4>Pink Floyd - Animals (&num;32)</h4>
+
+                            <img class="album-artwork" src="images/animals.jpg">
+
+                            <p class="review-comment">The writer had heard this album.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const toggle = elementId => {
+            let element = document.getElementById(elementId)
+            let isHidden = element.className.includes("hidden")
+            element.className = isHidden ? element.className.replace("hidden", "").trim() : element.className + " hidden"
+
+            let button = document.getElementById(elementId + "Button")
+            button.innerText = isHidden ? "Hide Answer" : "Show Answer"
+        }
+    </script>
+</html>

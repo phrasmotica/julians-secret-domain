@@ -1,0 +1,14 @@
+.container.guess-the-album {
+    background-color: skyblue;
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.review-comment {
+    font-style: italic;
+}
