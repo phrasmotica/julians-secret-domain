@@ -1,3 +1,20 @@
+body {
+    margin: 0em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.container.home {
+    background-color: ghostwhite;
+}
+
+.content {
+    padding: 1em;
+}
+
 h1 {
     text-align: center;
 }

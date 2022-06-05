@@ -1,3 +1,7 @@
+.container.music-reviews {
+    background-color: rgb(255, 212, 212);
+}
+
 .album-artwork {
     width: 400px;
     height: 400px;
