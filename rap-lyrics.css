@@ -1,0 +1,15 @@
+.container.rap-lyrics {
+    background-color: mediumaquamarine;
+}
+
+.lyrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.lyric {
+    text-align: center;
+    font-style: italic;
+}
