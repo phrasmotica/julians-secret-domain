@@ -2,9 +2,6 @@
     background-color: rgb(255, 212, 212);
 }
 
-.reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    row-gap: 1em;
-    column-gap: 1em;
+.review .genres {
+    color: grey;
 }
