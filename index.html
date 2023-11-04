@@ -3,6 +3,8 @@
     <head>
         <title>Julian's Secret Domain</title>
         <link rel="stylesheet" href="index.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
     </head>
 
     <body>
@@ -84,6 +86,8 @@
 
                 <h3>Other things</h3>
 
+                <p id="vegetarianCount">Days since I became a vegetarian: 0</p>
+
                 <a href="music-reviews.html">
                     <p>Music Reviews</p>
                 </a>
@@ -97,5 +101,15 @@
                 </a>
             </div>
         </div>
+
+        <script type="text/javascript">
+            const { DateTime } = window.luxon
+
+            const startDate = DateTime.local(2023, 11, 3, 4, 27) // roughly correct
+            const difference = DateTime.now().diff(startDate, "days")
+
+            const countText = document.getElementById("vegetarianCount")
+            countText.innerText = "Days since I became a vegetarian: " + Math.floor(difference.days)
+        </script>
     </body>
 </html>
